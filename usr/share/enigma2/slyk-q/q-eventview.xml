@@ -1,0 +1,185 @@
+<skin>
+
+	<screen name="EventViewSimple" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+		<!-- backgrounds -->
+		<ePixmap position="0,480" size="1280,20" pixmap="q-infobars/infobar-shadow.png" alphatest="blend" zPosition="-1" />
+		<eLabel position="0,500" size="1280,220" backgroundColor="blackglass" transparent="0" zPosition="-2" />
+		<ePixmap position="0,500" size="1280,220" pixmap="q-infobars/infobar1.png" alphatest="blend" zPosition="-1" />
+		<!-- date -->
+		<widget source="global.CurrentTime" render="Label" position="12,663" size="264,28" font="Regular;22" foregroundColor="infobargrey" backgroundColor="blackglass" valign="top" halign="right" transparent="1" zPosition="1">
+			<convert type="SlykQClockToText">SlykQDate</convert>
+		</widget>
+		<!-- arrows -->
+		<ePixmap position="241,554" size="23,14" pixmap="q-infobars/up-arrow.png" alphatest="blend" zPosition="1" />
+		<ePixmap position="241,627" size="23,14" pixmap="q-infobars/down-arrow.png" alphatest="blend" zPosition="1" />
+		<!-- channel -->
+		
+		<widget source="Service" render="Label" position="12,568" size="264,59" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1" zPosition="1">
+		     <convert type="MovieInfo">RecordServiceName</convert>
+		</widget>
+	
+	      <!-- picons / xpicons - see picons.xml -->
+	         <panel name="movie-eventview-picons"/>
+	         
+		<!-- progress bar -->
+		<ePixmap position="299,645" size="225,4" pixmap="q-infobars/progress-bg.png" alphatest="blend" zPosition="1" />
+		<ePixmap position="298,644" size="227,6" pixmap="q-infobars/infobar-progress-border.png" alphatest="blend" zPosition="4" />
+		<widget source="Event" render="Progress" position="298,644" size="227,6" pixmap="q-infobars/infobar-progress.png" transparent="1" alphatest="blend" zPosition="3">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+	
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="408,655" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="408,655" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="443,655" size="21,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="469,655" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="504,655" size="21,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- programme name -->
+		<widget source="Title" render="Label" position="537,519" size="400,28" font="Bold;23" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" transparent="1" zPosition="1" />
+		
+                <!-- programme description -->
+		 <!--
+                <widget name="FullDescription" position="537,548" size="508,133" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" scrollbarMode="showNever" transparent="1" zPosition="1" />
+		-->
+		
+ 	        <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="537,548" size="508,133" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" scrollbarMode="showNever" transparent="1" zPosition="1" >
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		
+		
+                <!-- record icon -->
+		<widget render="Pixmap" pixmap="q-icons/record.png" source="session.RecordState" position="1015,521" size="20,20" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		
+		<!-- now start time -->
+		<widget source="Event" render="Label" position="298,653" size="90,28" font="Bold;23" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="SlykQClockToText">SlykHDTime</convert>
+		</widget>
+		
+		<!-- next start time -->
+		<widget source="Event" render="Label" position="1060,653" size="186,28" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="SlykQClockToText">SlykHDTime</convert>
+		</widget>
+	</screen>
+	
+	<screen name="EventView" flags="wfNoBorder" position="0,0" size="1280,720" backgroundColor="transparent">
+	
+	<!-- backgrounds -->
+		<ePixmap position="0,480" size="1280,20" pixmap="q-infobars/infobar-shadow.png" alphatest="blend" zPosition="-1" />
+		<eLabel position="0,500" size="1280,220" backgroundColor="blackglass" transparent="0" zPosition="-2" />
+		<ePixmap position="0,500" size="1280,220" pixmap="q-infobars/infobar1.png" alphatest="blend" zPosition="-1" />
+		<!-- date -->
+		<widget source="global.CurrentTime" render="Label" position="12,663" size="264,28" font="Regular;22" foregroundColor="infobargrey" backgroundColor="blackglass" valign="top" halign="right" transparent="1" zPosition="1">
+			<convert type="SlykQClockToText">SlykQDate</convert>
+		</widget>
+		<!-- arrows -->
+		<ePixmap position="241,554" size="23,14" pixmap="q-infobars/up-arrow.png" alphatest="blend" zPosition="1" />
+		<ePixmap position="241,627" size="23,14" pixmap="q-infobars/down-arrow.png" alphatest="blend" zPosition="1" />
+		
+                <!-- channel -->
+                <!--
+		<widget source="session.CurrentService" render="Label" position="12,568" size="264,59" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1" zPosition="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		 -->
+		 
+ 	         <widget name="channel" position="12,568" size="264,59" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="center" halign="right" transparent="1" zPosition="1" />
+	      	
+	         <!-- picons / xpicons - see picons.xml -->
+	         <panel name="eventview-picons"/>
+	
+	
+		<!-- progress bar -->
+		<ePixmap position="299,645" size="225,4" pixmap="q-infobars/progress-bg.png" alphatest="blend" zPosition="1" />
+		<ePixmap position="298,644" size="227,6" pixmap="q-infobars/infobar-progress-border.png" alphatest="blend" zPosition="4" />
+		<widget source="Event" render="Progress" position="298,644" size="227,6" pixmap="q-infobars/infobar-progress.png" transparent="1" alphatest="blend" zPosition="3">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<!-- now start time -->
+		<widget source="Event" render="Label" position="298,653" size="90,28" font="Bold;23" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" halign="left" transparent="1" zPosition="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="SlykQClockToText">SlykHDTime</convert>
+		</widget>
+		<!-- icons -->
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/hd.png" position="408,655" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/sd.png" position="408,655" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide">Invert</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/widescreen.png" position="443,655" size="21,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsWidescreen</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/dolby.png" position="469,655" size="30,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="q-icons/subtitles.png" position="504,655" size="21,20" zPosition="1" alphatest="blend">
+			<convert type="ServiceInfo">SubtitlesAvailable</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- programme name -->
+		<widget source="Title" render="Label" position="537,519" size="400,28" font="Bold;23" foregroundColor="white" backgroundColor="blackglass" noWrap="1" valign="top" transparent="1" zPosition="1" />
+		<!-- programme description -->
+		<!--
+                <widget name="FullDescription" position="537,548" size="508,133" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" scrollbarMode="showNever" transparent="1" zPosition="1" />
+		-->
+		
+		<widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=80,repeat=0,always=0,oneshot=0,startdelay=6000,wrap" position="537,548" size="508,133" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" scrollbarMode="showNever" transparent="1" zPosition="1" >
+			<convert type="EventName">ExtendedDescription</convert>
+		</widget>
+		
+		<!-- record icon -->
+		<widget render="Pixmap" pixmap="q-icons/record.png" source="session.RecordState" position="1015,521" size="20,20" alphatest="blend" zPosition="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<!-- next start time -->
+		<widget source="Event" render="Label" position="1060,653" size="186,28" font="Regular;23" foregroundColor="white" backgroundColor="blackglass" valign="top" noWrap="1" transparent="1" zPosition="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="SlykQClockToText">SlykHDTime</convert>
+		</widget>
+
+		<widget name="red" pixmap="buttons/key_red.png" position="285,691" size="25,25" alphatest="blend" zPosition="3" />
+		<widget name="green" pixmap="buttons/key_green.png" position="474,691" size="25,25" alphatest="blend" zPosition="3" />
+		<widget name="yellow" pixmap="buttons/key_yellow.png" position="663,691" size="25,25" alphatest="blend" zPosition="3" />
+		<widget name="blue" pixmap="buttons/key_blue.png" position="852,691" size="25,25" alphatest="blend" zPosition="3" />
+		<widget name="key_red" position="315,691" size="170,25" font="Regular;23" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3" />
+		<widget name="key_green" position="504,691" size="170,25" font="Regular;23" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3" />
+		<widget name="key_yellow" position="693,691" size="170,25" font="Regular;23" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3" />
+		<widget name="key_blue" position="882,691" size="170,25" font="Regular;23" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3" />
+	</screen>
+	
+	<screen name="EventViewContextMenu" position="0,0" size="1280,720" backgroundColor="mid" flags="wfNoBorder" zPosition="1">
+		<panel name="template1" />
+		<panel name="remote-bg" />
+		<eLabel text="Menu" position="28,25" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="topleft" />
+		<eLabel text="Menu" position="30,27" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="0" transparent="1" foregroundColor="text-shadow" backgroundColor="topleft" />
+		<panel name="divider3" />
+		<panel name="2panel-gradient" />
+		<widget name="menu" textOffset="10,10" position="329,215" size="457,479" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/size2-blue3-48.png" backgroundPixmap="q-selectbars/blank.png" alphatest="blend" itemHeight="48" font="Regular;23" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2" />
+	</screen>
+	
+</skin>
+
+

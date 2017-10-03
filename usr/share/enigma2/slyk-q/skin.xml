@@ -1,0 +1,202 @@
+<skin>
+	<!-- Skin: SlykQ(2016) Version 1 by kiddac -->
+	
+        <!-- All graphics, icons, buttons, screens are my own hard work-->
+	<!-- If using any elements/graphics from this skin in your own work please reference me correctly -->
+
+	<!-- You can modify my skin as long as you keep this license and the original author for the skin in all of your modifications -->
+	
+        <!-- ****************************************************************************************************** -->
+	<!-- If you would like to buy me a beer for my efforts please use the paypal links on http://slyk1hd.yolasite.com/ -->
+	<!-- ****************************************************************************************************** -->
+        
+	<output id="0">
+		<resolution xres="1280" yres="720" bpp="32" />
+	</output>
+	
+        <!-- includes -->
+	        <include filename="/usr/share/enigma2/slyk-q/q-main-templates.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-button-templates.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-general.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-wizards.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-menus.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-infopanel.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-movies.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-epg.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-information.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-cccam.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-timers.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-channel-selection.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-infobar.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-eventview.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-plugins.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-network.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-vix.xml" />
+                <include filename="/usr/share/enigma2/slyk-q/q-picons.xml" />
+
+	<!-- fonts -->
+	<fonts>
+		<!-- default skin fonts -->
+	        <font name="Subtitlefont"  filename="/usr/share/fonts/nmsbd.ttf" scale="100"/>
+		<font name="LCD"           filename="/usr/share/fonts/lcd.ttf" scale="100"/>
+		<font name="Replacement"   filename="/usr/share/fonts/ae_AlMateen.ttf"  scale="100" replacement="1"/>
+
+		<!-- slyk1hd fonts -->
+		<font name="Regular" filename="/usr/share/enigma2/slyk-q/fonts/slyk-regular.ttf" scale="100" />
+		<font name="Bold" filename="/usr/share/enigma2/slyk-q/fonts/slyk-medium.ttf" scale="100" />
+		<font name="Console" filename="/usr/share/enigma2/slyk-q/fonts/lucon.ttf" scale="100" />
+	
+	        <!-- alias -->
+		<alias name="Body" font="Regular" size="23" height="30" />
+		<alias name="TextNormal" font="Regular" size="23" height="30" />
+		
+		<!-- context menu -->
+		<alias name="ChoiceList" font="Regular" size="20" height="30" />
+		
+		<!-- plugins -->
+		<alias name="PluginBrowser0" font="Regular" size="21" height="30" />        <!-- plugin name -->
+		<alias name="PluginBrowser1" font="Regular" size="14" height="20" />        <!-- plugin description -->
+		
+                <!-- help menus -->
+		<alias name="HelpMenuList" font="Regular" size="23" height="30" />
+		
+                <!-- virtual keyboard -->
+		<alias name="VirtualKeyboard" font="Regular" size="26" height="45" />
+		
+                <!-- used on tuner config - positioner -->
+		<alias name="SelectionList" font="Regular" size="23" height="30" />
+		
+                <!-- locationbox i.e movie file location  -->
+		<alias name="FileList" font="Regular" size="23" height="30" />
+		<alias name="FileListMulti" font="Regular" size="23" height="30" />	
+	</fonts>
+
+	<!-- default colour list -->
+	<colors>
+		<color name="transparent" value="#ff000000" />
+		<color name="transpBlack" value="#80000000" />
+		<color name="transpWhite" value="#16ffffff"/>
+		<color name="black" value="#00000000" />
+		<color name="red" value="#00ff0011" />
+		<color name="green" value="#307e13" />
+		<color name="yellow" value="#00ffff00"/>
+		<color name="blue" value="#000064c7"/>
+		<color name="white" value="#00ffffff" />
+		<color name="zapgreen" value="#00007f0e" />
+
+		<!-- slyk q colors -->
+ 	        <color name="skydarkblue" value="#0016356e" />
+		<color name="button-bg"                  value="#1a4273" />
+		<color name="select-darkblue-bg"         value="#00437c" />
+		<color name="select-lightblue-bg"        value="#006fce" />
+		<color name="skytitlebackground"         value="#00437c" />
+		<color name="messageboxbg"               value="#00437c" />
+		<color name="skylightblue"               value="#97c2ed" />
+                	
+		
+		<color name="text-shadow"                value="#003767"/>
+		<color name="blackglass"                 value="#4d000000"/> <!-- 90% = 1a000000 / 80% = 34000000 / 70% = 4d000000 / -->
+		<color name="skycyan"                    value="#5fa4cc"/>
+		<color name="bluetext"                   value="#3ab7fe" />
+		<color name="guidecolor"                 value="#3ab7fe" /> <!-- channel selection second colour -->
+	
+                <color name="epg"                        value="#004789" />
+                <color name="epg-now"                    value="#1a5a95" />
+                <color name="epg-selected"               value="#00284b" />
+                
+               	<color name="topleft"                    value="#007ad5" />
+	        <color name="topmid"                     value="#006ac6" />
+               	<color name="topright"                   value="#0057a7" />
+               	<color name="midleft"                    value="#036fc9" />
+               	<color name="mid"                        value="#004f9a" />
+               	<color name="midright"                   value="#004184" />
+               	<color name="botleft"                    value="#004d98" />
+               	<color name="botmid"                     value="#003470" />
+               	<color name="botright"                   value="#00295d" />
+               	<color name="select-middle"              value="#00274d" />
+               	<color name="infobargrey"                value="#8d8d8b" />
+	</colors>
+	
+	<!-- default colours -->
+	<windowstyle type="skinned" id="0">
+		<title offset="20,20" font="Bold;23" />
+		<color name="Background" color="messageboxbg" />
+		<color name="LabelForeground" color="white" />
+		<color name="ListboxBackground" color="messageboxbg" />
+		<color name="ListboxForeground" color="white" />
+		<color name="ListboxSelectedBackground" color="select-lightblue-bg" />
+		<color name="ListboxSelectedForeground" color="white" />
+		<color name="ListboxMarkedBackground" color="select-darkblue-bg" />
+		<color name="ListboxMarkedForeground" color="red" />
+		<color name="ListboxMarkedAndSelectedBackground" color="select-lightblue-bg" />
+		<color name="ListboxMarkedAndSelectedForeground" color="black" />
+		<color name="WindowTitleForeground" color="white" />
+		<color name="WindowTitleBackground" color="skytitlebackground" />
+		<!-- menu border -->
+		<borderset name="bsWindow">
+			<pixmap pos="bpTopLeft" filename="screens/b_tl.png" />
+			<pixmap pos="bpTop" filename="screens/b_t.png" />
+			<pixmap pos="bpTopRight" filename="screens/b_tr.png" />
+			<pixmap pos="bpLeft" filename="screens/b_l.png" />
+			<pixmap pos="bpRight" filename="screens/b_r.png" />
+			<pixmap pos="bpBottomLeft" filename="screens/b_bl.png" />
+			<pixmap pos="bpBottom" filename="screens/b_b.png" />
+			<pixmap pos="bpBottomRight" filename="screens/b_br.png" />
+		</borderset>
+		
+	</windowstyle>
+		<windowstyle type="skinned" id="1">
+		<color name="Background" color="messageboxbg" />
+		<color name="LabelForeground" color="white" />
+		<color name="ListboxBackground" color="messageboxbg" />
+		<color name="ListboxForeground" color="white" />
+		<color name="ListboxSelectedBackground" color="select-lightblue-bg" />
+		<color name="ListboxSelectedForeground" color="white" />
+		<color name="ListboxMarkedBackground" color="select-darkblue-bg" />
+		<color name="ListboxMarkedForeground" color="red" />
+		<color name="ListboxMarkedAndSelectedBackground" color="select-lightblue-bg" />
+		<color name="ListboxMarkedAndSelectedForeground" color="black" />
+		<color name="WindowTitleForeground" color="white" />
+		<color name="WindowTitleBackground" color="skytitlebackground" />
+	</windowstyle>
+	
+		<parameters>
+		<!-- <parameter name="ChoicelistDash" value="0,2,650,42"/> -->
+	        <!-- <parameter name="ChoicelistName" value="40,3,480,30"/> -->
+                <parameter name="ChoicelistIcon" value="10,2,25,25"/>
+		<!--	<parameter name="ConfigListSeperator" value="350"/>  -->
+		<parameter name="AutotimerEnabledIcon" value="10,2,25,24" />        <!-- Autotimer tick box -->
+		<parameter name="AutotimerRecordIcon" value="40,5,20,20" />         <!-- Autotimer Record Icon -->
+		
+                <parameter name="VirtualKeyboard" value="45,45" />                  <!-- virtual keyboard keyicon size -->
+		
+                <parameter name="PluginBrowserIcon" value="10,7,100,40" />          <!-- plugins main icon -->
+		<parameter name="PluginBrowserName" value="120,3,30" />             <!-- plugins name -->
+		<parameter name="PluginBrowserDescr" value="120,28,20" />           <!-- plugins description -->
+		
+                <parameter name="PluginBrowserDownloadIcon" value="10,0,60,55" />   <!-- plugins + - boxed icon -->
+		<parameter name="PluginBrowserDownloadName" value="80,3,30" />      <!-- plugins download name - see font alias PluginBrowser0 -->
+		<parameter name="PluginBrowserDownloadDescr" value="80,28,20" />    <!-- plugins download description -see font alias PluginBrowser1 -->
+		<!--
+                 <parameter name="HelpMenuListExtHlp0" value="0,0,795,28"/>
+		<parameter name="HelpMenuListExtHlp1" value="0,27,795,23"/>
+		-->
+		<parameter name="HelpMenuListHlp" value="10,4,700,30" />            <!-- help menu text -->
+		<parameter name="SelectionListDescr" value="50,2,750,30" />
+		
+                <!-- used on tuner config - positioner -->
+		<parameter name="SelectionListLock" value="10,2,25,24" />
+		<parameter name="SelectionListLockOff" value="10,2,25,24" />
+		
+                <!-- example is software management - backup list -->
+		<parameter name="FileListName" value="40,2,750,30" />
+		<parameter name="FileListIcon" value="10,2,25,24" />
+		<parameter name="FileListMultiName" value="75,2,715,30" />
+		<parameter name="FileListMultiIcon" value="45,5,25,24" />
+		<parameter name="FileListMultiLock" value="10,2,25,24" />
+	
+	</parameters>
+
+</skin>
+
+

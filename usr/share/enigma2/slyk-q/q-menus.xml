@@ -1,0 +1,168 @@
+
+<skin>
+
+        <screen name="menu-template">
+        	<panel name="template1" />
+		<panel name="remote-bg" />
+		<eLabel text="Menu" position="28,25" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="topleft"/>
+		<eLabel text="Menu" position="30,27" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="0" transparent="1" foregroundColor="text-shadow" backgroundColor="topleft"/>
+	      </screen>
+
+       	<screen name="menu-1panel">
+        	<panel name="menu-template" />
+		<widget source="menu" render="Listbox" position="329,215" size="224,479" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/size1-blue3-48.png" backgroundPixmap="q-selectbars/blank.png" alphatest="blend" itemHeight="48" font="Regular;23" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="3">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (20,0), size = (184,48), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c)
+                                              ],
+				"fonts": [gFont("Regular",23)],
+				"itemHeight": 48
+			
+				}
+                        </convert>
+		</widget>
+		<panel name="divider2"/>	
+		<panel name="1panel-gradient"/>
+	</screen>
+	
+	<screen name="menu-2panel">
+        	<panel name="menu-template" />
+		<widget source="menu" render="Listbox" position="329,215" size="457,479" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg"
+                selectionPixmap="q-selectbars/size2-blue3-48.png" backgroundPixmap="q-selectbars/blank.png" alphatest="blend" itemHeight="48" font="Regular;23" transparent="1" enableWrapAround="1" scrollbarMode="showNever" zPosition="2">
+			<convert type="TemplatedMultiContent">
+                                {"template": [	
+                                             MultiContentEntryText(pos = (20,0), size = (417,48), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0, color = 0x00ffffff, color_sel = 0x00ffffff, backcolor_sel = 0x0000437c)
+                                              ],
+				"fonts": [gFont("Regular",23)],
+				"itemHeight": 48
+			
+				}
+                        </convert>
+
+		</widget>
+		<panel name="divider3"/>	
+		<panel name="2panel-gradient"/>
+	</screen>
+	
+	<screen name="Menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_mainmenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_timermenu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_setup" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_video_menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+        
+       	<screen name="menu_audio_menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_rec" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_cam" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_system" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_extended" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_display" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_osd_menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+        
+       	<screen name="menu_harddisk" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+
+       	<screen name="menu_epg" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_epgloadsave_menu" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_network" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+	
+	<screen name="menu_scan" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+                <panel name="menu-2panel" />
+        </screen>
+        
+       	<screen name="menu_shutdown" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent" title="Main Menu">
+	        <panel name="menu-1panel" />
+	</screen>
+        
+        <!-- settings screens -->
+	
+	<screen name="setup-template">
+	     	<eLabel text="Settings" position="28,25" size="269,94" valign="bottom" halign="right" font="Regular;42"  zPosition="1" transparent="1" foregroundColor="white" backgroundColor="topleft"/>
+		<eLabel text="Settings" position="30,27" size="269,94" valign="bottom" halign="right" font="Regular;42"  zPosition="0" transparent="1" foregroundColor="text-shadow" backgroundColor="topleft"/>
+ 	        <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="350,209" size="640,440" zPosition="1" />
+		<widget name="config" textOffset="10,0" position="350,210" size="640,440" font="Regular;23" secondfont="Regular;23" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-lightblue-bg" selectionPixmap="q-selectbars/setup-640-55.png"
+                 itemHeight="55" enableWrapAround="1"  scrollbarMode="showNever" transparent="1" zPosition="2"/>
+	</screen>
+
+        
+	<screen name="Setup" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder">
+		<panel name="template1" />
+		<panel name="setup-template" />
+		<panel name="2RG-Source" />
+		<panel name="description-template" />
+                <panel name="HelpWindow-template" />
+                <panel name="footnote-template" />
+                <panel name="VkeyIcon-template" />
+			
+	</screen>
+	
+	<screen name="VFD_INISetup" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="4">
+	        <panel name="template1" />
+		<panel name="setup-template" />
+	        <panel name="3RGY" />
+	</screen>
+	
+	<screen name="OpenWebifConfig" position="0,0" size="1280,720" title="OpenWebif Configuration" flags="wfNoBorder" backgroundColor="transparent">
+		<panel name="template1" />
+ 	        <panel name="setup-template" />
+		<panel name="2RG-Source"  />		
+	</screen>
+	
+	<screen name="RemoteControlCode" position="0,0" size="1280,720" backgroundColor="transparent" flags="wfNoBorder" zPosition="4">
+		<panel name="template1" />
+		<panel name="setup-template" />
+		<panel name="2RG-Source"  />
+		<panel name="description-template" />
+	        <panel name="footnote-template" />
+                <panel name="HelpWindow-template" />
+	
+	</screen>
+
+</skin>

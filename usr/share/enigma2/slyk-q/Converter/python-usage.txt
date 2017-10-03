@@ -1,0 +1,16 @@
+SlykClockToText 
+
+SlykAsLength = 1h 10m (used on duration)
+SlykFullDate = Wednesday, 25th June (used as skyq homepage date)
+
+SlykServicePosition
+Remaining = -10 mins (used on timeshift pause icon)
+Remaining2 = -5 secs (used to show seconds on timeshft pause icon)
+Position = -10 mins (used on movies pause icon)
+Movie Remaining = 19 mins (used on movie bar - view time remaining 19 mins)
+
+
+
+
+
+

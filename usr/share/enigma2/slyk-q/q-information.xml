@@ -1,0 +1,82 @@
+
+
+
+<skin>
+	<!-- ##About## -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/About.py -->
+	<screen name="AboutOE" title="Image Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<widget source="lab1" render="Label" position="360,75" size="620,26" font="Regular;23" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="360,105" size="620,26" font="Regular;23" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab3" render="Label" position="360,135" size="620,26" font="Regular;23" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="338,201" size="666,401" zPosition="1" />
+		<widget name="AboutScrollLabel" position="360,220" size="620,420" foregroundColor="white" backgroundColor="mid" font="Regular;23" transparent="1" zPosition="1" />
+		<panel name="2RG" />
+		<panel name="InfoButton" />
+		<ePixmap pixmap="q-backgrounds/sidebar-246.png" alphatest="blend" position="1010,216" size="216,246" zPosition="1" />
+		<eLabel text="Slyk Q HD V1.016 \nby Kidda C (2017)\n\nFor the latest version of my skins or if you would like to treat me to a beer, please visit slyk1hd.yolasite.com\n\nThank you and enjoy. Kidda C" font="Regular;18" position="1020,224" size="200,220" foregroundColor="white" backgroundColor="midright" halign="left" transparent="1" zPosition="2" />
+	</screen>
+	
+	<screen name="Devices" title="Device Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="338,201" size="666,401" zPosition="1" />
+		<widget source="TunerHeader" render="Label" position="360,220" size="640,26" font="Bold;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="nims" render="Label" position="360,246" size="640,104" font="Regular;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="HDDHeader" render="Label" position="360,355" size="640,26" font="Bold;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="hdd" render="Label" position="360,381" size="640,104" font="Regular;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="MountsHeader" render="Label" position="360,490" size="640,26" font="Bold;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="mounts" render="Label" position="360,516" size="640,52" font="Regular;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<panel name="1R" />
+	</screen>
+	
+	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<widget source="lab1" render="Label" position="360,75" size="620,26" font="Regular;23" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="360,105" size="620,26" font="Regular;23" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab3" render="Label" position="360,135" size="620,26" font="Regular;23" foregroundColor="white" backgroundColor="mid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="338,201" size="666,401" zPosition="1" />
+		<widget name="AboutScrollLabel" position="360,220" size="620,420" font="Regular;23" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<panel name="1R" />
+	</screen>
+	
+	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="338,201" size="666,401" zPosition="1" />
+		<widget name="AboutScrollLabel" position="360,220" size="620,420" foregroundColor="white" backgroundColor="mid" font="Regular;23" transparent="1" zPosition="1" />
+		<ePixmap position="350,519" size="640,2" pixmap="div-h.png" alphatest="blend" transparent="1" />
+		<widget source="IFtext" render="Label" position="360,529" size="120,30" valign="center" zPosition="10" font="Regular;23" halign="left" foregroundColor="white" backgroundColor="botmid" transparent="1" />
+		<widget source="IF" render="Label" position="545,529" size="375,30" zPosition="10" valign="center" font="Regular;23" halign="left" foregroundColor="white" backgroundColor="botmid" transparent="1" />
+		<widget source="Statustext" render="Label" position="360,555" size="115,30" valign="center" zPosition="10" font="Regular;23" halign="left" foregroundColor="white" backgroundColor="botmid" transparent="1" />
+		<widget name="statuspic" pixmaps="skin_default/buttons/button_green.png,skin_default/buttons/button_green_off.png" position="545,562" zPosition="10" size="15,16" transparent="1" alphatest="blend" />
+		<panel name="1R" />
+	</screen>
+	
+	<screen name="SoftwareUpdateChanges" title="OE Changes" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<widget name="text" position="360,28" size="890,683" font="Console;16" foregroundColor="white" backgroundColor="mid" scrollbarMode="showOnDemand" transparent="1"  />
+		<panel name="3RGY" />
+	</screen>
+	
+	<!--
+	<screen name="TranslationInfo" title="Translation Information" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="transparent">
+	        <panel name="template1" />
+        	<widget source="TranslationInfo" render="Label" position="360,75" size="640,135" font="Bold;23" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+	        <widget source="TranslatorName" render="Label" position="360,210" size="890,440" font="Console;18" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="3"  />
+	        <panel name="1R" />
+	</screen>
+	-->
+	
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/ServiceInfo.py  -->
+	<screen name="ServiceInfo" position="0,0" size="1280,720" title="Service Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="338,201" size="666,401" zPosition="1" />
+		<widget name="infolist" position="360,220" size="620,420" foregroundColor="white" backgroundColor="mid" font="Regular;23" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" zPosition="1" />
+		<panel name="4RGYB" />
+	</screen>
+	
+	<screen name="ServiceInfoSimple" position="0,0" size="1280,720" title="Service Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="ServiceInfo" />
+	</screen>
+</skin>
+
+

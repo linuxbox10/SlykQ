@@ -1,0 +1,113 @@
+<skin>
+	
+	<!-- Wizard's -->
+	<screen name="RemoteControlTemplate">
+		<widget name="rc" pixmap="rc.png" position="1040,80" size="154,500" zPosition="1"  alphatest="blend" />
+		<widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" zPosition="2" size="37,70" alphatest="blend" />
+		<widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" zPosition="2" size="37,70" alphatest="blend" />
+		<widget name="arrowup" pixmap="arrowup.png" position="-100,-100" zPosition="2" size="37,70" alphatest="blend" />
+		<widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" zPosition="2" size="37,70" alphatest="blend" />
+	</screen>
+	
+
+	
+	<screen name="Wizard-title">
+	        <eLabel text="Wizard" position="28,25" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="topleft"/>
+                <eLabel text="Wizard" position="30,27" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="0" transparent="1" foregroundColor="text-shadow" backgroundColor="topleft"/>
+        </screen>
+	
+	<screen name="WizardTemplate">
+		<panel name="template1" />
+		<panel name="Wizard-title" />
+		<widget name="text" position="350,75" size="640,135" font="Regular;23" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="350,209" size="640,440" zPosition="1" />
+		<panel name="config-template" />
+ 	        <widget source="list" render="Listbox" position="350,210" size="640,440" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-lightblue-bg" selectionPixmap="q-selectbars/setup-640-55.png" itemHeight="55" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (10, 0), size = (640, 55), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 0) ],
+				"fonts": [gFont("Regular", 23)],
+				"itemHeight": 55
+				}</convert>
+		</widget>
+                <panel name="button-bg" />
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="341,660" size="25,25" alphatest="blend" zPosition="3" />
+		<widget name="languagetext" position="371,660" size="170,25" font="Regular;23" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3" />
+		<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<!-- HelpMenu -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/HelpMenu.py -->
+	<screen name="HelpMenu" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<eLabel text="Help" position="28,25" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="1" transparent="1" foregroundColor="white" backgroundColor="topleft" />
+		<eLabel text="Help" position="30,27" size="269,94" valign="bottom" halign="right" font="Regular;42" zPosition="0" transparent="1" foregroundColor="text-shadow" backgroundColor="topleft" />
+		<widget name="list" position="350,210" size="640,440" font="Regular;23" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-lightblue-bg" selectionPixmap="q-selectbars/setup-640-55.png" itemHeight="55" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget name="long_key" position="1011,596" size="214,55" font="Regular;23" halign="center" valign="center" foregroundColor="white" backgroundColor="botright" transparent="1" />
+		<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<!-- StartWizard -->
+	<!--https://github.com/openatv/enigma2/blob/master/lib/python/Screens/StartWizard.py-->
+	<screen name="StartWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- ImageWizard -->
+	<!-- Menu > Setup > Software Management > Software Restore -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/SoftwareManager/ImageWizard.py -->
+	<screen name="ImageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- DefaultWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/DefaultWizard.py -->
+	<screen name="DefaultWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- network wizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Plugins/SystemPlugins/NetworkWizard/NetworkWizard.py -->
+	<screen name="NetworkWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="DefaultSatLists" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- ??? -->
+	<screen name="DreamPackageWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<screen name="LanguageWizard" position="fill" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<panel name="Wizard-title" />
+		<widget name="text" position="350,75" size="640,135" font="Regular;23" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="350,209" size="640,440" zPosition="1" />
+		<widget source="languages" render="Listbox" position="350,210" size="640,440" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-lightblue-bg" selectionPixmap="q-selectbars/setup-640-55.png" itemHeight="55" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2">
+			<convert type="TemplatedMultiContent">{"template": [
+                                MultiContentEntryText(pos = (100, 0), size = (640, 55), flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER, text = 1) ],  # index 1 is the language name,
+                               	MultiContentEntryPixmapAlphaBlend(pos = (20,7), size = (60,40), png = 2), # index 2 is the pixmap
+				"fonts": [gFont("Regular", 23)],
+				"itemHeight": 55
+				}</convert>
+		</widget>
+		<panel name="config-template" />
+		<panel name="button-bg" />
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="341,660" size="25,25" alphatest="blend" zPosition="3" />
+		<widget name="languagetext" position="371,660" size="170,25" font="Regular;23" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" zPosition="3" />
+		<panel name="RemoteControlTemplate" />
+	</screen>
+	
+	<!-- CleanupWizard Plugin -->
+	<!-- https://github.com/libo/Enigma2/blob/master/lib/python/Plugins/SystemPlugins/CleanupWizard/CleanupWizard.py -->
+	<screen name="CleanupWizard" position="0,0" size="1280,720" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />
+	</screen>
+	
+	<!-- VideoWizard -->
+	<!-- https://github.com/openatv/enigma2/blob/master/lib/python/Screens/VideoWizard.py -->
+	<screen name="VideoWizard" position="fill" title="Welcome..." flags="wfNoBorder" backgroundColor="mid">
+		<panel name="WizardTemplate" />	</screen>
+</skin>
