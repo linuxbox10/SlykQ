@@ -1,0 +1,86 @@
+
+<skin>
+	<!-- ##About## -->
+	<!-- /lib/python/Screens/About.py -->
+	<screen name="AboutOE" title="Image Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<widget source="lab1" render="Label" position="540,140" size="930,39" font="Bold;33" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="540,185" size="930,39" font="Regular;33" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab3" render="Label" position="540,230" size="930,39" font="Regular;33" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="507,373" size="999,602" zPosition="1" />
+		<widget name="AboutScrollLabel" position="540,401" size="930,545" foregroundColor="white" backgroundColor="mid" font="Regular;33" transparent="1" zPosition="1" />
+		<panel name="New-Buttons-T1" />
+		<panel name="InfoButton" />
+		<ePixmap pixmap="q-backgrounds/sidebar-246.png" alphatest="blend" position="1515,385" size="324,369" zPosition="1" />
+		<eLabel text="Slyk Q V1.28 \nby Kidda C (2019)\n\nThis is an unnoficial build for the vuplus-images community" font="Regular;27" position="1530,397" size="300,330" foregroundColor="white" backgroundColor="midright" halign="left" transparent="1" zPosition="2" />
+	</screen>
+	
+	<!-- legacy -->
+	<screen name="About" title="Image Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="AboutOE" />
+	</screen>
+	
+	<screen name="Devices" title="Device Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="507,373" size="999,602" zPosition="1" />
+		<widget source="TunerHeader" render="Label" position="540,401" size="960,39" font="Bold;33" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="nims" render="Label" position="540,440" size="960,156" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="HDDHeader" render="Label" position="540,604" size="960,39" font="Bold;33" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="hdd" render="Label" position="540,643" size="960,156" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="MountsHeader" render="Label" position="540,806" size="960,39" font="Bold;33" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+		<widget source="mounts" render="Label" position="540,845" size="960,78" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1" zPosition="1" />
+	</screen>
+	
+	<screen name="SystemMemoryInfo" title="Memory Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="507,373" size="999,602" zPosition="1" />
+		<widget source="lab1" render="Label" position="540,140" size="930,39" font="Bold;33" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab2" render="Label" position="540,185" size="930,39" font="Regular;33" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget source="lab3" render="Label" position="540,230" size="930,39" font="Regular;33" foregroundColor="white" backgroundColor="topmid" valign="center" halign="left" transparent="1" zPosition="1" />
+		<widget name="AboutScrollLabel" position="540,401" size="930,545" foregroundColor="white" backgroundColor="mid" font="Regular;33" transparent="1" zPosition="1" />
+	</screen>
+	
+	<screen name="SystemNetworkInfo" title="Network Information" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="507,373" size="999,602" zPosition="1" />
+		<widget name="AboutScrollLabel" position="540,401" size="930,445" foregroundColor="white" backgroundColor="mid" font="Regular;33" transparent="1" zPosition="1" />
+		<ePixmap position="525,850" size="960,3" pixmap="div-h.png" alphatest="blend" transparent="1" />
+		<widget source="IFtext" render="Label" position="540,865" size="180,45" valign="center" zPosition="10" font="Regular;33" halign="left" foregroundColor="white" backgroundColor="botmid" transparent="1" />
+		<widget source="IF" render="Label" position="818,865" size="563,45" zPosition="10" valign="center" font="Regular;33" halign="left" foregroundColor="white" backgroundColor="botmid" transparent="1" />
+		<widget source="Statustext" render="Label" position="540,904" size="173,45" valign="center" zPosition="10" font="Regular;33" halign="left" foregroundColor="white" backgroundColor="botmid" transparent="1" />
+		<widget name="statuspic" pixmaps="buttons/button_green.png,buttons/button_green_off.png" position="818,914" zPosition="10" size="23,24" transparent="1" alphatest="blend" />
+		<panel name="New-Buttons-T1" />
+	</screen>
+	
+	<screen name="SoftwareUpdateChanges" title="OE Changes" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<eLabel position="490,0" size="1430,1080" backgroundColor="black" transparent="0" zPosition="-1" />
+		<widget name="text" position="540,62" size="1335,956" font="Console;24" foregroundColor="white" backgroundColor="black" scrollbarMode="showOnDemand" transparent="1" zPosition="3" />
+		<panel name="New-Buttons-T1" />
+	</screen>
+	
+	<!-- legacy -->
+	<screen name="ViewGitLog" title="OE Changes" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="SoftwareUpdateChanges" />
+	</screen>
+	
+	<screen name="TranslationInfo" position="center,center" size="675,525" title="Translation Information">
+		<widget source="TranslatorName" render="Label" text="Slyk Q" position="15,45" size="570,45" font="Bold;33" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
+		<widget source="TranslationInfo" render="Label" text="KiddaC\nSupport for this skin can be found on\nhttps://linuxsat-support.com/board/1462-kiddac-skins/" position="15,105" size="570,375" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" transparent="1" zPosition="3" />
+	</screen>
+	
+	<!-- /lib/python/Screens/ServiceInfo.py  -->
+	<screen name="ServiceInfoSimple" position="0,0" size="1920,1080" title="Service Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/385boxflare.png" alphatest="blend" position="507,373" size="999,602" zPosition="1" />
+		<widget name="AboutScrollLabel" position="540,401" size="930,545" foregroundColor="white" backgroundColor="mid" font="Regular;33" transparent="1" zPosition="1" />
+		<widget name="infolist" position="540,401" size="930,545" foregroundColor="white" backgroundColor="mid" font="Regular;33" scrollbarMode="showOnDemand" selectionDisabled="1" transparent="1" itemHeight="45" zPosition="1" />
+		<panel name="New-Buttons-T1" />
+	</screen>
+	
+	<!-- legacy -->
+	<screen name="ServiceInfo" position="0,0" size="1920,1080" title="Service Information" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="ServiceInfoSimple" />
+	</screen>
+</skin>
+
