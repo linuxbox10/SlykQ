@@ -1,0 +1,217 @@
+<skin>
+	<!-- CCcamInfo -->
+	<!-- /lib/python/Screens/CCcamInfo.py -->
+	<screen name="CCcamInfoMain" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
+		<widget name="menu" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+		<panel name="button-bg" />
+		<eLabel text="Menu config" position="557,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<eLabel text="Local box" position="872,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<eLabel text="Remote box" position="1187,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<eLabel text="Free memory" position="1502,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="512,1030" size="38,38" alphatest="blend" />
+		<ePixmap name="green" pixmap="buttons/key_green.png" position="827,1030" size="38,38" alphatest="blend" />
+		<ePixmap name="yellow" pixmap="buttons/key_yellow.png" position="1142,1030" size="38,38" alphatest="blend" />
+		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="1457,1030" size="38,38" alphatest="blend" />
+		<panel name="OKButton" />
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+self["menu"].l.setFont(0, gFont("Regular", 33))</applet>
+	</screen>
+	
+	<!-- general -->
+	<screen name="CCcamInfoInfoScreen" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphatest="blend" position="539,371" size="1006,614" zPosition="-1" />
+		<widget name="text" position="555,400" size="972,547" font="Regular;33" foregroundColor="white" backgroundColor="mid" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<!-- clients / active clients -->
+	<screen name="CCcamInfoSubMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphatest="blend" position="539,371" size="1006,614" zPosition="-1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,139" size="1002,238" zPosition="1" />
+		<widget name="list" textOffset="15,20" position="540,140" size="1002,238" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget name="info" position="570,400" size="942,547" font="Regular;33" foregroundColor="white" backgroundColor="mid" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<!-- servers -->
+	<screen name="CCcamInfoServerMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphatest="blend" position="539,371" size="1006,614" zPosition="-1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,139" size="1002,238" zPosition="1" />
+		<widget name="list" textOffset="15,20" position="540,140" size="1002,238" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget name="info" position="570,400" size="942,547" font="Regular;30" foregroundColor="white" backgroundColor="mid" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="CCcamInfoShareInfo" position="center,center" size="900,675">
+		<widget name="list" position="0,0" size="900,525" font="Regular;30" foregroundColor="white" backgroundColor="messageboxbg" foregroundColorSelected="white" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/setup-900-105.png" itemHeight="105" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="1" />
+		<panel position="0,e-45" size="0,38">
+			<panel name="Red-New-Button" />
+		</panel>
+		<panel position="225,e-45" size="0,38">
+			<panel name="Green-New-Button" />
+		</panel>
+		<panel position="450,e-45" size="0,38">
+			<panel name="Yellow-New-Button" />
+		</panel>
+		<panel position="675,e-45" size="0,38">
+			<panel name="Blue-New-Button" />
+		</panel>
+	</screen>
+	
+	<screen name="CCcamShareViewMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphatest="blend" position="539,371" size="1006,614" zPosition="-1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,139" size="1002,238" zPosition="1" />
+		<widget name="list" position="540,140" size="1002,238" font="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<widget name="title" position="570,400" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="top" transparent="1" />
+		<widget name="uphops" position="570,445" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="top" transparent="1" />
+		<widget name="cards" position="570,490" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="top" transparent="1" />
+		<widget name="providers" position="570,535" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="top" transparent="1" />
+		<widget name="reshare" position="570,580" size="960,45" font="Regular;30" foregroundColor="white" backgroundColor="mid" valign="top" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="CCcamInfoEcmInfoSelection" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
+		<widget name="list" textOffset="15,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="CCcamInfoMenuConfig" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
+		<widget name="list" textOffset="15,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+		<panel name="New-Buttons-T1" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="CCcamInfoRemoteBoxMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
+		<widget name="list" textOffset="15,20" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="New-Buttons-T1" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="CCcamInfoConfigMenu" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
+		<widget name="config" textOffset="15,0" position="540,385" size="1002,624" font="Regular;33" secondfont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2.png" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<panel name="button-bg" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="CCcamInfoConfigSwitcher" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/choicelist-bg.png" alphatest="blend" position="540,384" size="1002,228" zPosition="-1" />
+		<widget name="list" textOffset="15,3" position="540,385" size="1002,225" font="Regular;30" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-choicelist.png" itemHeight="45" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<panel name="button-bg" />
+		<panel name="New-Buttons-T1" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<!-- oscams -->
+	<screen name="OscamInfoMenu" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="540,384" size="1002,623" zPosition="1" />
+		<widget name="mainmenu" position="540,385" size="1002,624" foregroundColor="white" backgroundColor="mid" font="Regular;33" selectionPixmap="q-selectbars/q-menu-2.png" backgroundColorSelected="select-darkblue-bg" itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" />
+		<panel name="button-bg" />
+		
+		<eLabel text="ECM Info" position="557,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<eLabel text="Clients" position="872,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<eLabel text="Readers/Proxies" position="1187,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		<eLabel text="Show Log" position="1502,1030" size="255,38" font="Regular;33" halign="left" valign="center" transparent="1" noWrap="1" foregroundColor="white" backgroundColor="button-bg" />
+		
+		<ePixmap name="red" pixmap="buttons/key_red.png" position="512,1030" size="38,38" alphatest="blend" />
+		<ePixmap name="green" pixmap="buttons/key_green.png" position="827,1030" size="38,38" alphatest="blend" />
+		<ePixmap name="yellow" pixmap="buttons/key_yellow.png" position="1142,1030" size="38,38" alphatest="blend" />
+		<ePixmap name="blue" pixmap="buttons/key_blue.png" position="1457,1030" size="38,38" alphatest="blend" />
+		<panel name="OKButton" />
+	</screen>
+	
+	<screen name="oscECMInfo" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam ECM Info">
+		<panel name="template1" />
+		<ePixmap pixmap="q-backgrounds/flare-panel-large.png" alphatest="blend" position="539,371" size="1006,614" zPosition="-1" />
+		<widget name="output" textOffset="15,15" position="555,400" size="972,547" font="Console;24" foregroundColor="white" backgroundColor="mid" scrollbarMode="showOnDemand" transparent="1" />
+		<panel name="button-bg" />
+		<panel name="New-Buttons-T1" />
+		<panel name="OKButton" />
+		
+	</screen>
+	
+	<screen name="oscInfo" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam Info">
+		<panel name="console-template" />
+		<widget name="output" position="160,291" size="1600,646" font="Console;27" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white" />
+		<panel name="Full-Buttons-T1" />
+		<applet type="onLayoutFinish">from enigma import eListboxPythonMultiContent, gFont
+self["output"].l.setFont(1, gFont("Regular", 27))</applet>
+	</screen>
+	
+	<screen name="OscamInfoConfigScreen" position="0,0" size="1920,1080" title="OscamInfo Menu" flags="wfNoBorder" backgroundColor="mid">
+		<panel name="Setup-Default" />
+		<widget source="status" render="Label" position="540,140" size="1002,195" font="Regular;33" foregroundColor="white" backgroundColor="topmid" transparent="1" />
+	</screen>
+	
+	<screen name="oscReaderStats" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam Reader Stats">
+		<panel name="console-template" />
+		<widget source="output" render="Listbox" position="160,291" size="1600,646" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white">
+			<convert type="TemplatedMultiContent">{"template":[
+							MultiContentEntryText(pos = (0, 1), size = (250, 33), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (250, 1), size = (125, 33), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (375, 1), size = (375, 33), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (750, 1), size = (150, 33), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (900, 1), size = (150, 33), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (1050, 1), size = (200, 33), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (1275, 1), size = (200, 33), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (1475, 1), size = (200, 33), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							],
+						"fonts": [gFont("Regular",27)],
+					"itemHeight": 54
+				}</convert>
+		</widget>
+	</screen>
+	
+	<screen name="oscEntitlements" position="0,0" size="1920,1080" backgroundColor="mid" flags="wfNoBorder" title="Oscam Reader Stats">
+		<panel name="console-template" />
+		<widget source="output" render="Listbox" position="160,291" size="1600,646" zPosition="3" transparent="1" backgroundColor="black" foregroundColor="white">
+			<convert type="TemplatedMultiContent">{"template":[
+							MultiContentEntryText(pos = (0, 1), size = (80, 33), font=0, flags = RT_HALIGN_LEFT, text = 0), # index 0 is caid
+							MultiContentEntryText(pos = (90, 1), size = (150, 33), font=0, flags = RT_HALIGN_LEFT, text = 1), # index 1 is csystem
+							MultiContentEntryText(pos = (250, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 2), # index 2 is hop 1
+							MultiContentEntryText(pos = (290, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 3), # index 3 is hop 2
+							MultiContentEntryText(pos = (330, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 4), # index 4 is hop 3
+							MultiContentEntryText(pos = (370, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 5), # index 5 is hop 4
+							MultiContentEntryText(pos = (410, 1), size = (40, 33), font=0, flags = RT_HALIGN_LEFT, text = 6), # index 6 is hop 5
+							MultiContentEntryText(pos = (480, 1), size = (70, 33), font=0, flags = RT_HALIGN_LEFT, text = 7), # index 7 is sum of cards for caid
+							MultiContentEntryText(pos = (550, 1), size = (80, 33), font=0, flags = RT_HALIGN_LEFT, text = 8), # index 8 is reshare
+							MultiContentEntryText(pos = (630, 1), size = (1024, 50), font=1, flags = RT_HALIGN_LEFT, text = 9), # index 9 is providers
+							],
+						"fonts": [gFont("Regular",27)],
+					"itemHeight": 54
+				}</convert>
+		</widget>
+	</screen>
+	
+        <screen name="SoftcamSetup" position="0,0" size="1920,1080" title="Softcam Setup" flags="wfNoBorder" backgroundColor="mid">
+                <panel name="template1" />
+                <ePixmap pixmap="q-backgrounds/setup-bg.png" alphatest="blend" position="518,384" size="978,623" zPosition="1" />
+	        <widget name="config" textOffset="15,0" position="518,385" size="978,624" font="Regular;33" secondfont="Regular;33" foregroundColor="white" backgroundColor="mid" backgroundColorSelected="select-darkblue-bg" selectionPixmap="q-selectbars/q-menu-2-978.png"
+                 itemHeight="78" enableWrapAround="1" scrollbarMode="showNever" transparent="1" zPosition="2" />
+		<panel name="New-Buttons-T1" />
+	        <widget name="info" position="1514,384" size="360,645" font="Regular;24" foregroundColor="white" backgroundColor="mid" transparent="1" />
+
+        </screen>
+</skin>
+
